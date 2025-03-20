@@ -6,4 +6,7 @@ public class Candy{
     public String getFlavor(){
 
     }
+    public String toString(){
+        return flavor;
+    }
 }
