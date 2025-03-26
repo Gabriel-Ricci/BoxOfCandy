@@ -27,14 +27,15 @@ public class BoxOfCandy{
         return false;
     }
     public Candy removeNextByFlavor(String flavor){
-        for (int r = 0; r < box.length; r++){
+        for (int r = box.length - 1; r >= 0; r--){
             for (int c = 0; c < box[0].length; c++){
-                if (box[r][c].equals(flavor)){
+                Candy p = box[r][c];
+                if (p != null && p.getFlavor().equals(flavor)){
                     box[r][c] = null;
-                    return flavor;
+                    return p;
                 }
             }
         }
-        return false;
+        return null;
     }
 }
